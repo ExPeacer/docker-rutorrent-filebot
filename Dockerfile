@@ -41,7 +41,7 @@ RUN set -xe && \
 
 # Download sources tools
 RUN set -xe && \
-    git clone https://github.com/esmil/mktorrent /tmp/mktorrent && \
+    # git clone https://github.com/esmil/mktorrent /tmp/mktorrent && \
     git clone https://github.com/mirror/xmlrpc-c /tmp/xmlrpc-c && \
     git clone -b ${VER_LIBTORRENT} https://github.com/rakshasa/libtorrent /tmp/libtorrent && \
     git clone -b ${VER_RTORRENT} https://github.com/rakshasa/rtorrent /tmp/rtorrent && \
@@ -83,10 +83,10 @@ RUN set -xe && \
     ln -sf /usr/local/lib/libzen.so.0.0.0 /filebot/lib/Linux-x86_64/libzen.so
 
 # Compile mkTorrent
-RUN set -xe && \
-    cd /tmp/mktorrent && \
-    make -j ${BUILD_CORES-$(grep -c "processor" /proc/cpuinfo)} && \
-    make install
+# RUN set -xe && \
+#     cd /tmp/mktorrent && \
+#     make -j ${BUILD_CORES-$(grep -c "processor" /proc/cpuinfo)} && \
+#     make install
 
 # Compile MediaInfo
 RUN set -xe && \
@@ -178,7 +178,7 @@ RUN set -xe && \
 # Cleanup
 RUN set -xe && \
     strip -s /usr/local/bin/rtorrent && \
-    strip -s /usr/local/bin/mktorrent && \
+    # strip -s /usr/local/bin/mktorrent && \
     strip -s /usr/local/bin/mediainfo && \
     strip -s /usr/local/bin/fpcalc && \
     strip -s /usr/local/bin/geoipupdate && \
