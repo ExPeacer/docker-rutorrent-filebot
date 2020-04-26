@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE_NAME="rutorrent"
+IMAGE_NAME="rutorrent-filebot"
 
 if [ ! -z "${DOCKER_USERNAME}" ]; then
     # maintainer

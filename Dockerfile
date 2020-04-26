@@ -1,8 +1,8 @@
 FROM alpine:3.10
 
 LABEL description="rTorrent & ruTorrent & Filebot (based on Alpine)" \
-      maintainer="Djerfy <djerfy@gmail.com>" \
-      repository="https://github.com/djerfy/docker-rutorrent"
+      maintainer="ExPeacer <expeacer@gmail.com>" \
+      repository="https://github.com/expeacer/docker-rutorrent-filebot"
 
 ARG BUILD_CORES
 ARG VER_MEDIAINFO="20.03"

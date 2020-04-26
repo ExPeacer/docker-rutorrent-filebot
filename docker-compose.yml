@@ -1,7 +1,7 @@
 version: "3.7"
 services:
     seedbox:
-        image: djerfy/rutorrent:latest
+        image: expeacer/rutorrent-filebot:latest
         restart: always
         volumes:
             - "/etc/localtime:/etc/localtime:ro"
@@ -9,7 +9,7 @@ services:
             - "/srv/config:/config:rw"
             - "/srv/filebot/license.psm:/filebot/license.psm:ro"
         environment:
-            - "TZ=Europe/Paris"
+            - "TZ=Europe/Budapest"
             - "UID=1001"
             - "GID=1001"
             - "WEBROOT=/"

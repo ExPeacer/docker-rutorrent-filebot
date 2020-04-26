@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IMAGE_TAG="$1"
-IMAGE_NAME="rutorrent"
+IMAGE_NAME="rutorrent-filebot"
 
 do_tag(){
     local SRC=$1

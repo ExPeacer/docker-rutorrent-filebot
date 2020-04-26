@@ -1,10 +1,10 @@
 <p align="center">
-    <img alt="docker-rutorrent" src=".assets/logo.png" height="140" />
+    <img alt="docker-rutorrent-filebot" src=".assets/logo.png" height="140" />
     <p align="center">
-        <a href="https://github.com/djerfy/docker-rutorrent"><img alt="Github" src="https://flat.badgen.net/badge/github/latest/green?icon=github"></a>
-        <a href="https://hub.docker.com/r/djerfy/rutorrent"><img alt="Docker" src="https://flat.badgen.net/badge/docker/latest/green?icon=docker"></a>
-        <a href="https://github.com/djerfy/docker-rutorrent/tags"><img alt="Version" src="https://flat.badgen.net/github/tag/djerfy/docker-rutorrent"></a>
-        <a href="https://travis-ci.org/djerfy/docker-rutorrent"><img alt="Travis-CI" src="https://flat.badgen.net/travis/djerfy/docker-rutorrent/latest"></a>
+        <a href="https://github.com/expeacer/docker-rutorrent-filebot"><img alt="Github" src="https://flat.badgen.net/badge/github/latest/green?icon=github"></a>
+        <a href="https://hub.docker.com/r/expeacer/rutorrent-filebot"><img alt="Docker" src="https://flat.badgen.net/badge/docker/latest/green?icon=docker"></a>
+        <a href="https://github.com/expeacer/docker-rutorrent-filebot/tags"><img alt="Version" src="https://flat.badgen.net/github/tag/expeacer/docker-rutorrent-filebot"></a>
+        <a href="https://travis-ci.org/expeacer/docker-rutorrent-filebot"><img alt="Travis-CI" src="https://flat.badgen.net/travis/expeacer/docker-rutorrent-filebot/latest"></a>
         <img alt="Services" src="https://flat.badgen.net/badge/services/rtorrent,rutorrent,filebot?list=1">
         <br/>
         <a href="https://alpinelinux.org"><img alt="AlpineLinux" src="https://flat.badgen.net/badge/Alpine/3.10/green"></a>
@@ -16,9 +16,9 @@
 
 # Docker rTorrent + ruTorrent + Filebot
 
-> Image of origin comes from [xataz](https://github.com/xataz): [docker-rtorrent-rutorrent](https://github.com/xataz/docker-rtorrent-rutorrent)
+> Image of origin comes from [djerfy](https://github.com/djerfy): [docker-rutorrent](https://github.com/djerfy/docker-rutorrent) - big thanks for it!
 
-> Image `djerfy/rutorrent:latest` use **ruTorrent v3.10-beta** (works with **rTorrent v0.9.8**) but stable for use
+> Image `expeacer/rutorrent-filebot:latest` use **ruTorrent v3.10-beta** (works with **rTorrent v0.9.8**) but stable for use
 
 ## Features
 
@@ -32,7 +32,7 @@
 
 ## Tags
 
-* latest ([Dockerfile](https://github.com/djerfy/docker-rutorrent/blob/latest/Dockerfile))
+* latest ([Dockerfile](https://github.com/expeacer/docker-rutorrent-filebot/blob/latest/Dockerfile))
 
 ## Description
 
@@ -99,7 +99,7 @@ In the left menu, select *Services* and *My License Key*. Here generate a new li
 Access to ruTorrent interface: `http://xxx.xxx.xxx.xxx:8080/`
 
 ```bash
-docker container run -d --name rutorrent -p 8080:8080 -p 6881:6881 djerfy/rutorrent:latest
+docker container run -d --name rutorrent -p 8080:8080 -p 6881:6881 expeacer/rutorrent-filebot:latest
 ```
 
 ### Advanced
@@ -124,14 +124,14 @@ docker container run -d \
     -e DEBUG=true \
     -v $(pwd)/data/data:/data \
     -v $(pwd)/data/config:/config \
-    djerfy/rutorrent:latest
+    expeacer/rutorrent-filebot:latest
 ```
 
 ## Tests
 
-Docker image is built and tested via [Travis CI](https://travis-ci.org/djerfy/docker-rutorrent/). Status of the last build [![Build Status](https://travis-ci.org/djerfy/docker-rutorrent.svg?branch=latest)](https://travis-ci.org/djerfy/docker-rutorrent)
+Docker image is built and tested via [Travis CI](https://travis-ci.org/expeacer/docker-rutorrent-filebot/). Status of the last build [![Build Status](https://travis-ci.org/expeacer/docker-rutorrent-filebot.svg?branch=latest)](https://travis-ci.org/expeacer/docker-rutorrent-filebot)
 
-By default the last build (success) is pushed into Docker Hub with tag `nightly` (`djerfy/rutorrent:nightly`).
+By default the last build (success) is pushed into Docker Hub with tag `nightly` (`expeacer/rutorrent-filebot:nightly`).
 
 ## Contributing
 
